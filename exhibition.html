@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>And the Migrants Kept Coming — Jacob Lawrence and the Form of Resistance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #F4EDDE;
+  --paper-warm: #ECE2CB;
+  --ink: #1C1814;
+  --ink-soft: #4A3F35;
+  --ochre: #B8702E;
+  --rust: #8B4513;
+  --rule: #8B7355;
+  --column: 680px;
+  --wide: 880px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ============ HERO ============ */
+.hero {
+  text-align: center;
+  padding: 8rem 1.5rem 5rem;
+  border-bottom: 1px solid var(--rule);
+  background: linear-gradient(180deg, var(--paper-warm) 0%, var(--paper) 100%);
+}
+.hero .eyebrow {
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 2rem;
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+.hero .subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+  font-weight: 400;
+  color: var(--ink-soft);
+  margin-bottom: 3rem;
+  letter-spacing: 0.01em;
+}
+.hero .curator {
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+}
+.hero .curator strong {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* ============ SECTIONS ============ */
+.section {
+  max-width: var(--wide);
+  margin: 0 auto;
+  padding: 6rem 1.5rem 2rem;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.section-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--ink);
+}
+.divider {
+  width: 60px;
+  height: 1px;
+  background: var(--rule);
+  margin: 1.5rem auto;
+}
+
+/* ============ ESSAY ============ */
+.essay {
+  max-width: var(--column);
+  margin: 0 auto;
+}
+.essay p {
+  margin-bottom: 1.6rem;
+  text-align: justify;
+  hyphens: auto;
+}
+.essay p:first-of-type::first-letter {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.5rem;
+  font-weight: 500;
+  float: left;
+  line-height: 0.85;
+  padding-right: 0.6rem;
+  padding-top: 0.5rem;
+  color: var(--ochre);
+}
+
+/* ============ PANELS ============ */
+.panels {
+  max-width: var(--wide);
+  margin: 0 auto;
+}
+.panel {
+  margin-bottom: 6rem;
+  padding-bottom: 6rem;
+  border-bottom: 1px solid var(--rule);
+}
+.panel:last-child {
+  border-bottom: none;
+}
+.panel-image {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 2.5rem;
+  border: 1px solid var(--rule);
+  box-shadow: 0 30px 60px -30px rgba(28, 24, 20, 0.25);
+}
+.panel-image.vertical {
+  max-width: 480px;
+}
+.panel-image.horizontal {
+  max-width: 720px;
+}
+.panel-number {
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.panel-caption {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--ink-soft);
+  max-width: var(--column);
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+}
+.panel-caption::before { content: "\201C"; }
+.panel-caption::after { content: "\201D"; }
+.panel-meta {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  font-style: italic;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.02em;
+}
+.panel-label {
+  max-width: var(--column);
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* ============ VIDEO ============ */
+.video-wrap {
+  max-width: var(--column);
+  margin: 0 auto;
+  text-align: center;
+}
+.video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--ink);
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--paper-warm);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+.video-frame iframe,
+.video-frame video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: contain;
+  background: #000;
+}
+.video-caption {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+/* ============ WORKS CITED ============ */
+.works-cited {
+  max-width: var(--column);
+  margin: 0 auto;
+}
+.works-cited p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 1.4rem;
+  padding-left: 2rem;
+  text-indent: -2rem;
+}
+
+/* ============ FOOTER ============ */
+footer {
+  text-align: center;
+  padding: 5rem 1.5rem 3rem;
+  margin-top: 4rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.05em;
+}
+footer p { margin-bottom: 0.5rem; }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 640px) {
+  body { font-size: 17px; }
+  .hero { padding: 5rem 1.25rem 3.5rem; }
+  .section { padding: 4rem 1.25rem 1.5rem; }
+  .essay p { text-align: left; }
+  .essay p:first-of-type::first-letter { font-size: 3.5rem; }
+  .panel { margin-bottom: 4rem; padding-bottom: 4rem; }
+  .panel-caption { font-size: 1.1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="eyebrow">A Virtual Exhibition</div>
+  <h1>And the Migrants Kept Coming</h1>
+  <div class="subtitle">Jacob Lawrence and the Form of Resistance</div>
+  <div class="curator">Curated by <strong>Junayed Haider</strong> &middot; City College of New York &middot; May 2026</div>
+</section>
+
+<!-- ============ ESSAY ============ -->
+<section class="section" id="essay">
+  <div class="section-header">
+    <div class="section-eyebrow">Catalog Essay</div>
+    <div class="divider"></div>
+  </div>
+  <div class="essay">
+    <p>In 1941, a twenty-three-year-old Harlem painter named Jacob Lawrence completed sixty small tempera panels on the Great Migration (also titled <em>The Migration Series</em>, in panels that chronicled the journey of over a million Black Americans from the Jim Crow South into the industrial centers of the North between roughly 1915 and the 1950s) to produce sixty small tempera panels called <em>The Migration of the Negro</em>, renamed in 1960 to <em>The Migration Series</em>. The series was soon purchased, split evenly between the Museum of Modern Art and the Phillips Collection, making Lawrence the first African American artist represented in MoMA's collection (Hills 2019). This exhibition brings together ten panels from the MoMA collection and uses them to argue that Lawrence conceived the series not as a documentary narrative of displacement, but as a formal argument for the Great Migration as collective resistance.</p>
+
+    <p>Most analyses have taken the series as history painting&mdash;as documentary reportage transformed into images. This has not been entirely against Lawrence's wishes. Before starting to paint he spent months researching the migration at the 135th Street Branch Library in Harlem and wrote a title for each of the sixty panels prior to painting it. The resulting sequence, as Caruso and Caruso note, &ldquo;moves at a cadence resembling a storyboard for a film&rdquo; (Caruso and Caruso 2015). But treating the <em>Migration Series</em> simply as documentary misunderstands what it is, and why it is radical. Lawrence is making an argument in painting, an argument that form carries as much meaning as its subject.</p>
+
+    <p>The argument starts with the choice of seriality itself. All sixty panels are identical in size, and Lawrence painted them simultaneously, one color applied to all sixty before he moved to the next color to &ldquo;tie the pieces together in a coherent whole&rdquo; (Lorensen 2006). This is significant. By foregoing a monumental, singular canvas traditionally demanded by history painting, Lawrence deliberately rejected the premises of the genre. The series contains no hero, no great turning point, only sixty equally weighted moments; the cumulative effect makes clear that the meaning of the migration resides not in any individual action but in the mass repetition of private gestures over decades, and not in some heroic act. Form, here, performs the function of argument.</p>
+
+    <p>The Southern panels that form the beginning of the series are neither romantic nor nostalgic. In panel 14, which shows a Black figure standing in a court before a wall of inscrutable white officials, Lawrence sets out the frame for the story he is telling with a plain caption: &ldquo;Among the social conditions that existed which was partly the cause of the migration was the injustice done to the Negroes in the courts.&rdquo; Panel 22 is equally arresting in its constriction of its subjects. Three men, viewed only from behind, are cuffed together in front of iron bars that mirror exactly the vertical line of the men's bodies; in panel 22 Lawrence even contrives to make the bars and the men's bodies virtually indistinguishable, so that the men seem partly to be the prison in which they are confined. They possess no faces because, in the framework Lawrence has established, they are all interchangeable; whatever has been done to these men is also done to thousands of others. The Jim Crow South, for the migrants, was not a place they left but a system whose logic necessitated escape&mdash;&ldquo;migration meant movement, and movement was an act of moral rebellion,&rdquo; as Lawrence himself put it in 1971.</p>
+
+    <p>The argument moves through the middle of the series as resistance becomes mobilization. Panel 28 portrays the Northern labor agent, a common feature in the story of the migration, as an iconic figure framed in a vast expanse with stark, geometric simplicity. Panel 36 (&ldquo;They arrived in great numbers into Chicago, the gateway of the West&rdquo;) captures Lawrence's signature faceless masses, rendering them as a legible force rather than as pathetic individuals. This is the heart of the series' formal strategy, according to Lorensen: Lawrence's anonymous, painted bodies deny the viewer the privilege of pity and allow the viewer to understand the Migration as an expression of agency (Lorensen 2006). The geometry of the panel is profoundly political.</p>
+
+    <p>The Northern panels do not offer a triumphant progression of progress. Panel 46 depicts the cramped, unhealthy lodgings of workers in a labor camp, while Panel 50 renders a race riot in Chicago as one example of the white violence in the North, mirroring that which the migrants had fled. Here the argument intensifies: the Migration was resistant because it was sustained despite white labor and white capital, and the opposition it inspired, even though it never achieved complete liberty for all. Panel 58 (&ldquo;In the North the Negro had better educational facilities&rdquo;) is the only panel that contains unmitigated celebration. Children are captured in an exceptionally luminous yellow classroom at their chalkboards and that is precisely what the Migration has won for the migrants. The final panel, 60, closes the series with the indelible statement that has since become its signature, &ldquo;And the migrants kept coming.&rdquo; For Laney, this line acts as the real thesis statement of the series, and is &ldquo;an open-ended declaration of enduring movement&rdquo; (Laney 2007); in the grammar of the series, in other words, the Migration has never stopped.</p>
+
+    <p>It is vital that the <em>Migration Series</em> not be reduced to a mere lesson in history, or to a saccharine narrative. The series' seriality, color palette, choreographed masses, and utter lack of a central protagonist are not merely decorative. This is the load-bearing architecture of Lawrence's argument that the Great Migration was an act of collective refusal, accomplished by nameless millions, which the series' forms lend a concrete shape that we can hang on the wall.</p>
+  </div>
+</section>
+
+<!-- ============ EXHIBITION (PANELS) ============ -->
+<section class="section" id="exhibition">
+  <div class="section-header">
+    <div class="section-eyebrow">The Exhibition</div>
+    <div class="divider"></div>
+    <h2 class="section-title">Ten Panels</h2>
+  </div>
+
+  <div class="panels">
+
+    <!-- PANEL 2 -->
+    <div class="panel">
+      <img class="panel-image horizontal" src="images/panel-02.jpg" alt="Jacob Lawrence, The Migration Series, Panel 2">
+      <div class="panel-number">Panel 2</div>
+      <div class="panel-caption">The World War had caused a great shortage in Northern industry and also citizens of foreign countries were returning home.</div>
+      <div class="panel-meta">1940&ndash;41 &middot; Casein tempera on hardboard &middot; The Museum of Modern Art, New York</div>
+      <p class="panel-label">Lawrence opens the cycle's argument with economics. World War I created two simultaneous labor demands: Northern factories needed bodies, and the foreign workers who had previously filled those roles were returning to Europe to fight. Black Southerners stepped into the opening. The panel depicts migrants assembled on a station platform, their figures simplified into the flat planes of color that will recur throughout the series. Lawrence offers no individuating detail &mdash; these are not portraits. They are collective. By placing the economic precondition first, Lawrence refuses the racist commonplace that migrants moved out of confusion or impulse. They moved because they read the conditions, and they acted. The Migration begins, in Lawrence's telling, with intelligence.</p>
+    </div>
+
+    <!-- PANEL 10 -->
+    <div class="panel">
+      <img class="panel-image horizontal" src="images/panel-10.jpg" alt="Jacob Lawrence, The Migration Series, Panel 10">
+      <div class="panel-number">Panel 10</div>
+      <div class="panel-caption">They were very poor.</div>
+      <div class="panel-meta">1940&ndash;41 &middot; Casein tempera on hardboard &middot; The Museum of Modern Art, New York</div>
+      <p class="panel-label">A single sentence carries this panel. Two figures sit at an empty wooden table, their plates bare. The composition is austere: warm browns of the table, the sharper angles of the bowls, the bowed posture of the seated figures. Lawrence's restraint is the point. He does not depict poverty as spectacle, the way Depression-era documentary photography often did. There is no pleading look at the camera, no narrative cue inviting the viewer's pity. The migrants are simply hungry. The flatness of the picture plane mirrors the flatness of options available to them in the Southern economy. Lawrence offers poverty as a fact, not a performance, and his refusal to dramatize it is itself a form of respect: these are not subjects to be looked at, but conditions to be reckoned with.</p>
+    </div>
+
+    <!-- PANEL 14 -->
+    <div class="panel">
+      <img class="panel-image horizontal" src="images/panel-14.jpg" alt="Jacob Lawrence, The Migration Series, Panel 14">
+      <div class="panel-number">Panel 14</div>
+      <div class="panel-caption">Among the social conditions that existed which was partly the cause of the migration was the injustice done to the Negroes in the courts.</div>
+      <div class="panel-meta">1940&ndash;41 &middot; Casein tempera on hardboard &middot; The Museum of Modern Art, New York</div>
+      <p class="panel-label">Lawrence's Southern courtroom is a study in vertical confrontation. A single Black figure stands at the picture's center, isolated against a wall of taller white officials whose forms blur into one mass. There is no jury, no audience, no defense. Lawrence has stripped the scene of every legal apparatus that would normally suggest fairness. What remains is the geometry of injustice: one body against many, the small against the large, the marked against the unmarked. The caption identifies the courts as "partly the cause" of the Migration, and the panel makes the argument visually. To live under a legal system designed to convict you is to live without recourse. Leaving was not flight; it was the only available verdict.</p>
+    </div>
+
+    <!-- PANEL 22 -->
+    <div class="panel">
+      <img class="panel-image vertical" src="images/panel-22.jpg" alt="Jacob Lawrence, The Migration Series, Panel 22">
+      <div class="panel-number">Panel 22</div>
+      <div class="panel-caption">Another of the social causes of the migrants' leaving was that at times they did not feel safe, or it was not the best thing to be found on the streets late at night. They were arrested on the slightest provocation.</div>
+      <div class="panel-meta">1940&ndash;41 &middot; Casein tempera on hardboard &middot; The Museum of Modern Art, New York</div>
+      <p class="panel-label">Three men stand cuffed behind iron bars, their backs to the viewer. Lawrence rhymes the verticals of their bodies with the verticals of the cell bars so exactly that the men nearly disappear into the architecture of confinement. He gives them no faces. The choice is deliberate. By withholding individual identity, Lawrence insists that what we are looking at is not three specific arrests but the institutional fact of arrest &mdash; the routine, the policy, the system of capricious detention that made Black streets in the South unsafe at every hour. The panel argues, without sentimentality, that escape from this geometry was not a luxury or an aspiration. It was self-defense.</p>
+    </div>
+
+    <!-- PANEL 28 -->
+    <div class="panel">
+      <img class="panel-image horizontal" src="images/panel-28.jpg" alt="Jacob Lawrence, The Migration Series, Panel 28">
+      <div class="panel-number">Panel 28</div>
+      <div class="panel-caption">The labor agent who had been sent South by Northern industry was a very familiar person in the Negro counties.</div>
+      <div class="panel-meta">1940&ndash;41 &middot; Casein tempera on hardboard &middot; The Museum of Modern Art, New York</div>
+      <p class="panel-label">The labor agent stands alone in a flattened landscape, his coat and hat picked out in deeper tones against the open Southern sky. Lawrence depicts him with the stillness of an icon. Historically, the labor agent was an ambiguous figure &mdash; sometimes an honest recruiter, sometimes a deceiver promising more than the Northern factories would deliver. Lawrence does not resolve the ambiguity. The figure is simply there, embedded in the rural counties he visited, present enough to be remembered by name. What the panel makes visible is the infrastructure of the Migration itself: it was not spontaneous. It was organized, channeled, made possible by specific actors moving between worlds. The Great Migration had mechanisms.</p>
+    </div>
+
+    <!-- PANEL 36 -->
+    <div class="panel">
+      <img class="panel-image horizontal" src="images/panel-36.jpg" alt="Jacob Lawrence, The Migration Series, Panel 36">
+      <div class="panel-number">Panel 36</div>
+      <div class="panel-caption">They arrived in great numbers into Chicago, the gateway of the West.</div>
+      <div class="panel-meta">1940&ndash;41 &middot; Casein tempera on hardboard &middot; The Museum of Modern Art, New York</div>
+      <p class="panel-label">A dense, faceless crowd fills the picture plane. Bags, hats, coats, the suggestion of feet in forward motion &mdash; Lawrence withholds every individuating mark. Chicago receives them as a collective. This panel completes the formal argument that the South panels began: the Migration must be read in plural. Lorensen has noted that Lawrence's faceless crowds refuse the viewer the consolations of pity, and Chicago's gateway is where that refusal becomes most insistent. We do not see who arrived. We see that many arrived, and that they kept arriving. The compositional density does more than illustrate scale. It argues that historical force is built out of unnamed people moving in the same direction. The Migration's power was numerical, and Lawrence will not let us forget it.</p>
+    </div>
+
+    <!-- PANEL 46 -->
+    <div class="panel">
+      <img class="panel-image horizontal" src="images/panel-46.jpg" alt="Jacob Lawrence, The Migration Series, Panel 46">
+      <div class="panel-number">Panel 46</div>
+      <div class="panel-caption">Industries attempted to board their labor in quarters that were oftentimes very unhealthy. Labor camps were numerous.</div>
+      <div class="panel-meta">1940&ndash;41 &middot; Casein tempera on hardboard &middot; The Museum of Modern Art, New York</div>
+      <p class="panel-label">The panel collapses workers into the architecture of their housing. Figures are stacked vertically in cramped quarters, the geometry of bunks and walls leaving little space for the bodies inside them. Lawrence makes no rhetorical move to soften the conditions. The Northern factories that had pulled migrants up out of the Southern fields did not deliver dignity; they delivered new forms of structural neglect. Patricia Hills has described this stretch of the cycle as Lawrence's refusal of the redemptive narrative &mdash; the insistence that arrival in the North did not end the work of resistance. The panel sustains the series' thesis at exactly the moment a lesser painter would have relaxed it. Migration was not deliverance. It was the next stage of struggle.</p>
+    </div>
+
+    <!-- PANEL 50 -->
+    <div class="panel">
+      <img class="panel-image horizontal" src="images/panel-50.jpg" alt="Jacob Lawrence, The Migration Series, Panel 50">
+      <div class="panel-number">Panel 50</div>
+      <div class="panel-caption">Race riots were numerous. White workers were hostile toward the migrants who had been hired to break strikes.</div>
+      <div class="panel-meta">1940&ndash;41 &middot; Casein tempera on hardboard &middot; The Museum of Modern Art, New York</div>
+      <p class="panel-label">Lawrence stages the riot as overlapping bodies in motion, their limbs angled into the diagonal energy that the South panels have largely refused. The composition's sudden activation is meaningful. For most of the cycle, Lawrence has kept his figures still &mdash; standing in lines, sitting at tables, waiting at platforms. Here the geometry breaks. The argument is brutal: the North met the migrants with the same violence the South had supplied, only now organized along the fault lines of labor. White workers, threatened by Black migrants hired as strikebreakers, turned on them in the streets. The panel refuses any reading of the Migration as a journey from danger to safety. The danger followed. What changed was its source.</p>
+    </div>
+
+    <!-- PANEL 58 -->
+    <div class="panel">
+      <img class="panel-image horizontal" src="images/panel-58.jpg" alt="Jacob Lawrence, The Migration Series, Panel 58">
+      <div class="panel-number">Panel 58</div>
+      <div class="panel-caption">In the North the Negro had better educational facilities.</div>
+      <div class="panel-meta">1940&ndash;41 &middot; Casein tempera on hardboard &middot; The Museum of Modern Art, New York</div>
+      <p class="panel-label">Children stand at chalkboards in a classroom rendered in warm yellow, the rare bright key in Lawrence's restrained palette. The panel is one of the cycle's only unguarded affirmations. After the housing and the riots, after the hostile labor and the unhealthy quarters, Lawrence allows himself to depict a genuine gain. Education was the Migration's most tangible reward &mdash; the reason families with no other reason kept boarding trains north. The composition is calm, the figures arranged in attentive parallel lines, the geometry no longer crowded or fractured. Lawrence is not na&iuml;ve here; the series will not end on this note. But Panel 58 holds open the possibility that the resistance the Migration enacted produced something concrete: a generation of Black children who could read.</p>
+    </div>
+
+    <!-- PANEL 60 -->
+    <div class="panel">
+      <img class="panel-image horizontal" src="images/panel-60.jpg" alt="Jacob Lawrence, The Migration Series, Panel 60">
+      <div class="panel-number">Panel 60</div>
+      <div class="panel-caption">And the migrants kept coming.</div>
+      <div class="panel-meta">1940&ndash;41 &middot; Casein tempera on hardboard &middot; The Museum of Modern Art, New York</div>
+      <p class="panel-label">The final panel returns to the train station that opened the series, closing the cycle's structural circle. Figures press forward against the picture's edge, their bodies caught mid-motion, their bags still in their hands. Lawrence's caption is the series' true thesis. The Migration did not end in 1941 when he finished the panels; it did not end with the cycle's last image; it has not, in the sense the series intends, ended. James Laney has called the line open-ended, eternal, and suggestive of more to come. The persistence is the point. By staging continuation rather than conclusion, Lawrence transforms the Migration from a historical event into a sustained moral act. They kept coming. They keep coming.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ VIDEO ============ -->
+<section class="section" id="video">
+  <div class="section-header">
+    <div class="section-eyebrow">Curatorial Video</div>
+    <div class="divider"></div>
+    <h2 class="section-title">A Walk Through the Show</h2>
+  </div>
+  <div class="video-wrap">
+    <div class="video-frame">
+      <video controls preload="metadata" poster="">
+        <source src="curatorial-video.mp4" type="video/mp4">
+        Your browser doesn&rsquo;t support embedded video. <a href="curatorial-video.mp4">Download the video</a> to watch.
+      </video>
+    </div>
+    <div class="video-caption">A two-and-a-half-minute introduction to the exhibition and its argument.</div>
+  </div>
+</section>
+
+<!-- ============ WORKS CITED ============ -->
+<section class="section" id="works-cited">
+  <div class="section-header">
+    <div class="section-eyebrow">Works Cited</div>
+    <div class="divider"></div>
+  </div>
+  <div class="works-cited">
+    <p>Caruso, Hwa Young Choi, and Juan Caruso Jr. "Art Review: Jacob Lawrence's African American Migration Series &mdash; 1915 to the 1950s." <em>International Journal of Multicultural Education</em> 17, no. 3 (2015): 119&ndash;127.</p>
+    <p>Hills, Patricia. <em>Painting Harlem Modern: The Art of Jacob Lawrence.</em> Berkeley: University of California Press, 2019.</p>
+    <p>Laney, James D. "Jacob Lawrence's <em>The Migration Series</em>: Art as Narrative History." <em>The Social Studies</em> 98, no. 4 (July/August 2007): 131&ndash;135.</p>
+    <p>Lorensen, Jutta. "Between Image and Word, Color and Time: Jacob Lawrence's <em>The Migration Series</em>." <em>African American Review</em> 40, no. 3 (2006): 571&ndash;586.</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <p>Curated by Junayed Haider &middot; City College of New York &middot; Art History &middot; Spring 2026</p>
+  <p>All images of <em>The Migration Series</em> &copy; The Jacob and Gwendolyn Knight Lawrence Foundation, Seattle / Artists Rights Society (ARS), New York. Digital images &copy; The Museum of Modern Art, New York.</p>
+</footer>
+
+</body>
+</html>
